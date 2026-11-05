@@ -66,32 +66,6 @@
         <section class="settings-card">
           <div class="settings-card-heading">
             <UIcon
-              name="i-ic:round-translate"
-              class="text-xl"
-            />
-            <h2>{{ $t("settings.language") }}</h2>
-          </div>
-          <label
-            class="field-label"
-            for="settings-language"
-          >{{
-            $t("settings.language_label")
-          }}</label>
-          <USelectMenu
-            id="settings-language"
-            v-model="selectedLanguage"
-            :items="languageItems"
-            :search-input="{
-              placeholder: t('settings.filter_language'),
-              icon: 'i-lucide-search',
-            }"
-            class="w-full"
-          />
-        </section>
-
-        <section class="settings-card">
-          <div class="settings-card-heading">
-            <UIcon
               name="i-ph:paint-brush-bold"
               class="text-xl"
             />
@@ -367,31 +341,8 @@ import {
 import { PAPER } from '~/utils/constants/data'
 import type { PaperType } from '~/types'
 
-import type { SelectMenuItem } from '@nuxt/ui'
-
 const colorMode = useColorMode()
-const { t, locale, locales } = useI18n()
-const switchLocalePath = useSwitchLocalePath()
-
-const languageItems = computed<SelectMenuItem[]>(() =>
-  locales.value.map(item => ({
-    label: item.name,
-    value: item.code,
-    icon: item.icon,
-  })),
-)
-
-const selectedLanguage = computed<SelectMenuItem | undefined>({
-  get: () =>
-    languageItems.value.find(
-      item => typeof item === 'object' && item !== null && item.value === locale.value,
-    ),
-  set: (item) => {
-    if (typeof item === 'object' && item !== null && item.value && item.value !== locale.value) {
-      navigateTo(switchLocalePath(item.value))
-    }
-  },
-})
+const { t } = useI18n()
 
 const themeModes = computed(() => [
   { value: 'system', label: t('settings.auto'), icon: 'i-ph:desktop-bold' },

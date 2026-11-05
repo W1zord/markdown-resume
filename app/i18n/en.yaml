@@ -1,4 +1,3 @@
-lang: Language
 toggle_dark: Toggle dark mode
 
 nav:
@@ -7,17 +6,13 @@ nav:
   settings: Settings
   privacy: Privacy Policy
   information: Information
-  links: Links
-  coffee: Buy me a coffee
   see_more: See more
 
 settings:
   title: Settings
-  description: Manage language, appearance, and local storage.
-  language: Language
-  language_label: Display language
-  filter_language: Filter languages...
+  description: Manage appearance and local storage.
   appearance: Appearance
+
   theme: Color theme
   light: Light
   dark: Dark
@@ -53,9 +48,6 @@ settings:
     name_placeholder: e.g., Bruce Wayne
     paper_size: Paper Size
 
-disqus:
-  leave_a_comment: Leave a Comment
-
 dialog:
   close: Close dialog
 
@@ -63,21 +55,6 @@ head:
   title: Markdown Resume - Free Online Markdown Resume Maker
   desc: Free online resume maker, allows you to create your resume in minutes with Markdown!
   keywords: resume maker, cv maker, curriculum vitae maker, markdown resume, resume.md
-
-landing:
-  hero: Write your <span text-brand>resume</span> in Markdown!
-  desc: is a free and open source tool created to build and manage your resumes as easily as possible, without losing the privacy of your data.
-  start: Create My Resume
-  feats:
-    - title: Simple and Powerful
-      items: Manage multiple resumes<br>Real-time preview<br>Export to PDF format<br>Export to HTML<br>Export to MS Word (beta)<br>Image gallery<br>Fully customizable<br>Pick fonts and add icons<br>And <a href="https://github.com/junian/markdown-resume#features" target="_blank">more features</a>
-    - title: Security First
-      items: Open source and free<br>Data are saved locally<br>No login or registration required<br>Your data never leave your device<br>No server-side storage or processing<br>You own your data, always
-  analytics_disclaimer: >
-    When accessed via <a href="https://junian.dev/markdown-resume/" target="_blank" class="underline">junian.dev/markdown-resume/</a>,
-    this app uses <strong>Google Analytics</strong> and <strong>Cloudflare Web Analytics</strong> to measure aggregate
-    usage metrics such as page views and active users. Your resume content and images are never collected or transmitted.
-    By using this app, you agree to the <a href="https://junian.dev/privacy-policy/" target="_blank" class="underline">Privacy Policy</a>.
 
 resumes:
   my_resumes: My Resumes

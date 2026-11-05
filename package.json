@@ -26,7 +26,6 @@
     "@mdit/plugin-icon": "^1.1.3",
     "@nuxt/content": "^3.16.2",
     "@nuxt/eslint": "^1.17.0",
-    "@nuxt/scripts": "^1.3.12",
     "@nuxt/ui": "^4.12.0",
     "@nuxtjs/color-mode": "^4.0.1",
     "@nuxtjs/i18n": "^10.6.0",

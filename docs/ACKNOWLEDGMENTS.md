@@ -1,6 +1,6 @@
 # Acknowledgments
 
-[**Markdown Resume**][markdown-resume] stands on the shoulders of a lot of open-source works. This file credits the projects whose code, assets, or designs are included in or adapted by this repository, and notes their licenses.
+**Markdown Resume** stands on the shoulders of a lot of open-source works. This file credits the projects whose code, assets, or designs are included in or adapted by this repository, and notes their licenses.
 
 If you believe something here is mis-attributed or missing, please open an issue — it will be corrected promptly.
 
@@ -18,5 +18,3 @@ Built with:
 - [Vite](https://github.com/vitejs/vite)
 - [Zag](https://zagjs.com/)
 - [UnoCSS](https://github.com/antfu/unocss)
-
-[markdown-resume]: <https://www.junian.dev/markdown-resume> "Markdow Resume Online App by Junian.dev"

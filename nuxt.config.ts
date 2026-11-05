@@ -12,7 +12,6 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
     '@vite-pwa/nuxt',
     '@nuxtjs/sitemap',
-    '@nuxt/scripts',
     '@nuxt/eslint',
     '@nuxt/content',
     '@nuxt/ui',
@@ -56,7 +55,6 @@ export default defineNuxtConfig({
         { property: 'og:locale', content: 'en_US' },
         { property: 'og:image', content: siteConfig.image },
         { property: 'twitter:card', content: 'summary_large_image' },
-        { property: 'twitter:site', content: '@JunianDev' },
         { property: 'twitter:title', content: siteConfig.title },
         { property: 'twitter:description', content: siteConfig.description },
         { property: 'twitter:image', content: siteConfig.image },
@@ -81,7 +79,6 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       googleFontsKey: '',
-      disqusShortname: '',
     },
   },
   srcDir: 'app/',
@@ -123,12 +120,6 @@ export default defineNuxtConfig({
   },
 
   pwa,
-
-  scripts: {
-    registry: {
-      googleAnalytics: { trigger: 'onNuxtReady' },
-    },
-  },
 
   sitemap: {
     zeroRuntime: true,

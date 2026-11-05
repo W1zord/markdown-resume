@@ -121,28 +121,6 @@ const navigationMenuUi = {
   link: 'min-h-10',
 }
 
-const externalLinks = computed(() => [
-  {
-    href: 'https://www.junian.dev/coffee/',
-    rel: 'nofollow noopener',
-    icon: 'i-twemoji:hot-beverage',
-    label: t('nav.coffee'),
-    coffee: true,
-  },
-  {
-    href: 'https://github.com/junian/markdown-resume/',
-    rel: 'nofollow noopener',
-    icon: 'i-tabler:brand-github',
-    label: 'GitHub',
-  },
-  {
-    href: 'https://www.junian.dev/',
-    rel: 'dofollow',
-    icon: 'i-tabler:world',
-    label: 'Junian.dev',
-  },
-])
-
 const navItems = computed<NavigationMenuItem[][]>(() => [
   [
     {
@@ -173,17 +151,6 @@ const navItems = computed<NavigationMenuItem[][]>(() => [
       icon: 'i-mdi:shield-lock-outline',
       to: '/privacy',
     },
-  ],
-  [
-    { label: t('nav.links'), type: 'label' },
-    ...externalLinks.value.map(link => ({
-      label: link.label,
-      icon: link.icon,
-      href: link.href,
-      target: '_blank',
-      rel: link.rel,
-      class: link.coffee ? 'coffee-link' : undefined,
-    })),
   ],
   [
     {

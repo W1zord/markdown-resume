@@ -66,19 +66,6 @@ tools like this possible. Special thanks to these projects and libraries:
 | [@nuxtjs/color-mode](https://color-mode.nuxtjs.org/){target="_blank" rel="nofollow noopener noreferrer"} | Dark mode support | MIT License |
 | [@vite-pwa/nuxt](https://vite-pwa-org.netlify.app/){target="_blank" rel="nofollow noopener noreferrer"} | PWA support | MIT License |
 
-## Analytics
-
-When you use the hosted version at [junian.dev/markdown-resume/](https://junian.dev/markdown-resume/){target="_blank" rel="nofollow noopener noreferrer"},
-we use **Google Analytics** and **Cloudflare Web Analytics** to understand aggregate usage patterns.
-These help us improve the application by showing us things like page views and active users.
-
-**Important:** Your resume content, document settings, and uploaded images are *never* included
-in analytics events. We only collect pseudonymous technical information to help us make the app better.
-Google Analytics is used in a pseudonymous manner, and no resume content is transmitted to analytics providers.
-By using the hosted version, you agree to our [Privacy Policy](./privacy/).
-
 ## Get in Touch
 
-Have questions, feedback, or want to contribute? We'd love to hear from you!
-Visit [Junian.dev](https://www.junian.dev/){target="_blank" rel="nofollow noopener noreferrer"} or check out the
-repository to get involved.
+Have questions, feedback, or want to contribute? Open an issue or pull request in this project's repository.

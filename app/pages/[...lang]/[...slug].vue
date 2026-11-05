@@ -53,40 +53,27 @@
 </template>
 
 <script setup lang="ts">
-// Locale roots (e.g. /sp, /en) are matched by this catch-all route instead of
-// pages/index.vue, so render the home page for them when the slug is empty.
 const route = useRoute()
-const { locale } = useI18n()
 
 const slug = computed(() => {
   const lang = route.params.lang
   const rest = route.params.slug
-  let segments = [
+  const segments = [
     ...(Array.isArray(lang) ? lang : lang ? [lang] : []),
     ...(Array.isArray(rest) ? rest : rest ? [rest] : []),
   ]
-  if (segments[0] === locale.value) {
-    segments = segments.slice(1)
-  }
   return `/${segments.join('/')}`
 })
 
-// An empty slug means we're at a locale root (e.g. /sp) — show the home page.
 const isHome = computed(() => slug.value === '/')
 
 const { data: page } = await useAsyncData(
-  `content-page:${locale.value}:${slug.value}`,
+  `content-page:${slug.value}`,
   async () => {
     if (isHome.value) return null
-
-    const pathFor = (lang: string) => `/${lang}${slug.value}`
-    let doc = await queryCollection('content').path(pathFor(locale.value)).first()
-    if (!doc && locale.value !== 'en') {
-      doc = await queryCollection('content').path(pathFor('en')).first()
-    }
-    return doc
+    return await queryCollection('content').path(`/en${slug.value}`).first()
   },
-  { watch: [locale, slug] },
+  { watch: [slug] },
 )
 
 const iconMap: Record<string, string> = {
@@ -105,8 +92,7 @@ const lastModifiedText = computed(() => {
   if (Number.isNaN(date.getTime())) {
     return raw
   }
-  const lang = locale.value === 'sp' ? 'es' : locale.value
-  return new Intl.DateTimeFormat(lang, { dateStyle: 'long' }).format(date)
+  return new Intl.DateTimeFormat('en', { dateStyle: 'long' }).format(date)
 })
 
 useHead(() => ({

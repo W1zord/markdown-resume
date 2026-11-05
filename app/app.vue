@@ -8,7 +8,7 @@
 <script setup lang="ts">
 import { siteConfig } from '~~/configs/siteConfig'
 
-const { t, locale } = useI18n()
+const { t } = useI18n()
 const colorMode = useColorMode()
 
 useHead({
@@ -18,7 +18,7 @@ useHead({
     { name: 'description', content: t('head.desc') },
     { property: 'og:title', content: t('head.title') },
     { property: 'og:description', content: t('head.desc') },
-    { property: 'og:locale', content: locale },
+    { property: 'og:locale', content: 'en_US' },
     {
       name: 'theme-color',
       content: () => (colorMode?.value === 'dark' ? '#475569' : '#f3f4f6'),

@@ -1,17 +1,10 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/junian/commons-media/refs/heads/master/svg/markdown-mark-logo.svg" style="height: 96px;" alt="Markdown Logo" title="Markdown Logo" />
+<img src="../public/favicon.svg" style="height: 96px;" alt="Markdown Resume" title="Markdown Resume" />
 
 # Markdown Resume
 
 Write an ATS-friendly resume in Markdown. Available for everyone, optimized for developers.
-
-[![Markdown Resume](https://img.shields.io/badge/Start_Writing_Now-1a73e8?style=for-the-badge&logo=markdown&logoColor=white "Write Resume in Markdown")][app]
-[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?&logo=buy-me-a-coffee&logoColor=black&style=for-the-badge "Buy me a Coffee")][coffee]
-
-<a href="https://trendshift.io/repositories/157153?utm_source=trendshift-badge&amp;utm_medium=badge&amp;utm_campaign=badge-trendshift-157153" target="_blank" rel="noopener noreferrer"><img src="https://trendshift.io/api/badge/trendshift/repositories/157153/daily?language=Vue" alt="junian%2Fmarkdown-resume | Trendshift" width="250" height="55"/></a>
-
-[![Markdown Resume Screenshot](https://www.junian.dev/img/b/R29vZ2xl/AVvXsEi0XXzED8hJoI6NjzZSGKN68nANKihJrglZSuv9LnTFrSTN6w7Xgl0smpr8q5s6vLGCl1BOIeQYeBF-AbpOxpOHzeR6531A3eAuLJrTUimd01QWAmvP6gZZYUggkND1q7LOh5iQuNJg3nu7ekr5wezPa9quyhh0O9itQj9qTPY0vkmdwv1dtfTa-7uYsds/s1600/markdown-resume-screenshot.png "Markdown Resume")][app]
 
 </div>
 
@@ -53,10 +46,9 @@ Highly recommend using Chromium-based browsers, e.g., [Chrome][chrome] or [Micro
 - Optional Monaco editor minimap
 - Light document previews in every color theme
 - Light, dark, and system appearance modes
-- English and Indonesian interface languages
 - Local storage usage estimates, refresh controls, and a protected factory-reset action
 - Data is saved locally in your browser using IndexedDB browser feature (see [`localForage` repo](https://localforage.github.io/localForage/) for details)
-- [**Image Gallery**](https://www.junian.dev/markdown-resume/images/) — upload images and reference them in your resume using Markdown or HTML (see below)
+- **Image Gallery** — upload images and reference them in your resume using Markdown or HTML (see below)
 
 ## Icon Support
 
@@ -117,7 +109,7 @@ When exporting to **HTML** or **DOCX**, image references are automatically repla
 
 ## Environment Variables
 
-Configuration is done via a `.env` file in the project root. You can copy [`.env.example`](.env.example) as a starting point:
+Configuration is done via a `.env` file in the project root. You can copy [`.env.example`](../.env.example) as a starting point:
 
 ```bash
 cp .env.example .env
@@ -125,11 +117,9 @@ cp .env.example .env
 
 | Variable | Description |
 |---|---|
-| `NUXT_PUBLIC_SITE_URL` | Site origin URL (e.g. `https://example.com`). Defaults to `https://www.junian.dev`. |
+| `NUXT_PUBLIC_SITE_URL` | Site origin URL (e.g. `https://example.com`). Defaults to `http://localhost:3000`. |
 | `NUXT_APP_BASE_URL` | Site base URL (e.g. `/` for root or `/my-app/` for a subpath). Defaults to `/markdown-resume/`. |
 | `NUXT_PUBLIC_GOOGLE_FONTS_KEY` | [Google Fonts Developer API Key](https://developers.google.com/fonts/docs/developer_api#APIKey). Required to enable the font picker that lists fonts from Google Fonts. Without this key the font selection will only show locally available fonts. |
-| `NUXT_PUBLIC_SCRIPTS_GOOGLE_ANALYTICS_ID` | [Google Analytics 4](https://analytics.google.com/) Measurement ID (e.g. `G-XXXXXXXXXX`). Enables GA4 page-view and event tracking. Leave empty to disable analytics. |
-| `NUXT_PUBLIC_DISQUS_SHORTNAME` | [Disqus](https://disqus.com/) shortname for your site. Enables the Disqus comment section. Leave empty to hide comments. |
 
 ## Development
 
@@ -148,17 +138,11 @@ pnpm run build
 
 ## License
 
-This project is licensed under the [AGPL-3.0](LICENSE) license.
+This project is licensed under the [AGPL-3.0](../LICENSE) license.
 See [ACKNOWLEDGMENTS](ACKNOWLEDGMENTS.md) for credits.
-
----
-
-Made with ☕ by [Junian.dev](https://www.junian.dev).
 
 [careercup]: <https://web.archive.org/web/20240501052328/https://www.careercup.com/resume> "CareerCup Good Resume"
 [chrome]: <https://www.google.com/chrome/> "Download Google Chrome"
 [edge]: <https://www.microsoft.com/en-us/edge/> "Download Microsoft Edge"
 [pwa]: https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps
 [sw]: https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API
-[app]: <https://www.junian.dev/markdown-resume/> "Write Resume / CV in Markdown"
-[coffee]: <https://www.junian.dev/coffee/> "Buy Junian.dev a Coffee"
